@@ -1,0 +1,17 @@
+p {
+  color: orange;
+}
+
+.header-link:hover {
+  color: darkblue;
+}
+
+h1 {
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  text-shadow: 2px 2px #000000;
+}

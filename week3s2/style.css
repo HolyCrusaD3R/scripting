@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(http://www.omnifood.net/resources/CSS/img/hero-min.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+}
+
+.row {
+  width: 60vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.logo-black {
+  height: 100px;
+  width: auto;
+  margin: auto 0;
+  display: none; /* TODO */
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  margin: auto 0;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  font-size: x-large;
+}
+
+ul li {
+  list-style: none;
+  margin: auto 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ul li:hover {
+    border-bottom: 2px solid #e67e22;
+    } */
+ul li::after {
+  position: relative;
+  bottom: -5px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: #e67e22;
+  content: "";
+  width: 100%;
+  display: block;
+  visibility: 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+ul li:hover::after {
+  /* display: block; */
+  visibility: 1;
+  opacity: 1;
+}
+
+.postcard {
+  width: 60vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.quote {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 240%;
+}
+
+.buttons {
+  margin-top: 1rem;
+}
+
+.btn {
+  border: 1px solid #e67e22;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.btn-full {
+  background-color: #e67e22;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: #e67e22;
+}
+
+.btn:hover {
+  background-color: #c46a1b;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  color: white;
+}

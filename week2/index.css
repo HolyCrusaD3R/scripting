@@ -1,0 +1,16 @@
+.testParagraph {
+  color: red;
+  font-size: 4rem;
+  background-color: black;
+  font-weight: bolder;
+  transition: ease-in 0.5s;
+}
+
+.testParagraph:hover {
+  color: blue;
+  padding: 8rem;
+}
+
+.testShadow {
+  text-shadow: -10px 10px 10px blue, 10px -10px 10px red;
+}

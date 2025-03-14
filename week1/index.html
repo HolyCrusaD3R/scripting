@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 1</title>
+  </head>
+  <body>
+    <h1>TODO:</h1>
+
+    <ul>
+      <li>pirveli davaleba</li>
+      <li>meore davaleba</li>
+    </ul>
+
+    <ol>
+      <li>mesame davaleba</li>
+      <li>meotxe davaleba</li>
+    </ol>
+    <a href="https://www.google.com">Google</a>
+
+    <!-- telefonis nomeri -->
+    <a href="tel:+995555555555">+995 555 55 55 55</a>
+
+    <!-- email misamarti -->
+    <a href="mailto:myexample@mail.com">myexample@mail.com</a>
+
+    <button type="button">Click Me!</button>
+
+    <a href="https://www.google.com" target="_blank">
+      <img
+        src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+        alt="google"
+      />
+    </a>
+    <br />
+    <figure>
+      <figcaption>Sweet Home</figcaption>
+      <img
+        src="https://www.w3schools.com/html/pic_mountain.jpg"
+        alt="Mountain View"
+      />
+    </figure>
+    <br />
+
+    <audio autoplay controls>
+      <source
+        src="https://www.w3schools.com/html/horse.mp3"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
+
+    <video
+      controls
+      width="300"
+      height="200"
+      poster="https://www.w3schools.com/html/pic_mountain.jpg"
+      autoplay
+      loop
+      muted
+      volume="0.5"
+    >
+      <source
+        src="https://www.w3schools.com/html/mov_bbb.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+    <br />
+
+    <table>
+      <caption>
+        New Menu
+      </caption>
+      <thread>
+        <tr>
+          <th>Category</th>
+          <th>Meal</th>
+          <th>Price</th>
+        </tr>
+      </thread>
+      <tbody>
+        <tr>
+          <td>Breakfast</td>
+          <td>Scrambled eggs</td>
+          <td>$6</td>
+        </tr>
+        <tr>
+          <td>Lunch</td>
+          <td>Chicken Salad</td>
+          <td>$10</td>
+        </tr>
+        <tr>
+          <td>Dinner</td>
+          <td>Spaghetti</td>
+          <td>$12</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+
+    <form
+      name="login_form"
+      autocomplete="off"
+      novalidate
+      method="post"
+      onsubmit="return false"
+    >
+      <label>
+        email
+        <input type="email" name="email" placeholder="email" required />
+      </label>
+      <label>
+        Password
+        <input type="password" name="password" required />
+      </label>
+      <button type="submit">Login</button>
+    </form>
+
+    <br />
+
+    <form
+      name="name_form"
+      onsubmit="return false"
+      autocomplete="off"
+      novalidate
+      method="post"
+    >
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+
+    <div>
+      <input type="button" value="A Normal Button" />
+      <div>
+        <label for="checkbox">Checkbox</label>
+        <input type="checkbox" value="checkbox val" id="checkbox" />
+      </div>
+    </div>
+
+    <form onSubmit="return false">
+      <p>What is your favorite food?</p>
+      <label>
+        Pasta
+        <input type="radio" name="dish" value="pasta" checked />
+      </label>
+      <label>
+        Pizza
+        <input type="radio" name="dish" value="pizza" />
+      </label>
+      <label>
+        Burger
+        <input type="radio" name="dish" value="burger" />
+      </label>
+      <label>
+        Steak
+        <input type="radio" name="dish" value="steak" />
+      </label>
+      <label>
+        Day of the week
+        <input id="day" type="range" value="5" min="1" max="7" step="1" />
+      </label>
+      <input type="date" min="2020-01-01" max="2020-12-31" />
+      <input type="time" />
+      <input type="datetime-local" />
+      <select>
+        <option value="tomato">Tomato</option>
+        <option value="cucumber">Cucumber</option>
+        <option value="lettuce">Lettuce</option>
+      </select>
+    </form>
+
+    <form onsubmit="return false">
+      <fieldset>
+        <legend>Contact details</legend>
+        <label>
+          Name
+          <input type="text" name="username" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" />
+        </label>
+        <label>
+          Phone Number
+          <input type="tel" name="phone" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Choose the products</legend>
+        <label>
+          <input type="checkbox" name="product" value="vegetable" />
+          vegetable
+        </label>
+        <label>
+          <input type="checkbox" name="product" value="fruit" />
+          fruit
+        </label>
+        <label>
+          <input type="checkbox" name="product" value="dairy" />
+          dairy
+        </label>
+      </fieldset>
+      <button type="submit">Order</button>
+    </form>
+  </body>
+</html>
