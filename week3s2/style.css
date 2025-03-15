@@ -187,3 +187,30 @@ ul li:hover::after {
   font-size: 4rem;
   color: #e67e22;
 }
+
+.galleryContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  width: 100%;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  background-color: black;
+}
+
+.galleryImage {
+  width: 25%;
+  height: auto;
+  overflow: hidden;
+  object-fit: cover;
+  border-style: none;
+  background-color: black;
+  opacity: 0.7;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.galleryImage:hover {
+  z-index: 1;
+  opacity: 1;
+  transform: scale(1.03);
+}
