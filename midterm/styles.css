@@ -134,3 +134,20 @@ input[type="checkbox"]:checked {
   margin-top: 66px;
   cursor: pointer;
 }
+
+.submitBtn:hover {
+  background-color: #2a2a2c;
+}
+
+.error-message {
+  color: #cc777b;
+  font-size: 12px;
+  margin-top: 5px;
+  letter-spacing: 2%;
+  font-weight: 500;
+}
+
+.wrong-input {
+  border: 1px solid #eaccc9;
+  box-shadow: 2px 2px 5.1px #ebcdca;
+}
