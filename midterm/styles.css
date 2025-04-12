@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.formContainer {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.formHeader {
+  font-size: 40px;
+  letter-spacing: 2%;
+  font-weight: 500;
+}
+
+#groupForm {
+  margin-top: 93px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.formGroup label {
+  font-size: 13px;
+  letter-spacing: 2%;
+  font-weight: 500;
+}
+
+.formGroupCheckBoxes label {
+  font-size: 13px;
+  letter-spacing: 2%;
+  font-weight: 500;
+}
+
+.formGroupHalfContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.formGroupHalf {
+  width: 40%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formGroup input {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d4d4d4;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  font-size: 13px;
+  letter-spacing: 2%;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.formGroup select {
+  appearance: none;
+  height: 50px;
+  width: 40%;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #d4d4d4;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 13px;
+  letter-spacing: 2%;
+  font-weight: 500;
+  background-image: url(https://s3-alpha-sig.figma.com/img/395b/9951/5d40b6007952b7095d68daf08699e5a9?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=hcxqqTkcPY6AY4DcR5QOABkFy5fv0v9YwmM73ncMlquS9KcjvQk92qTvRhoA5huQJxZzBV~Or~hrUmEWcQKodF0UFUiFRfE6t6UbvJTY-a8bMMN4qeAh6FKpA8jeWhlzy1FQY~1fxt9wcrzu0IKSIz25azrEFelWHqReAEUiZQBv13liLZzk2zs86cKyGCtOiJlfJIi81FRT1fZqmxq66d2dpSr1XzC82ev08EL3unmoiSRIzUDaoVCmjjcpzudaHjHBkia4JSgXF4RtYGEPXdCyc0StiVV-prAGw~Mx2lRElb5Qzgo6WkHfUdDxJNN4h4xZ0leE3cDJBAN858eTdA__);
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 13px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkboxGrid {
+  width: 40%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 19px;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid #c6c6c6;
+}
+
+input[type="checkbox"]:checked {
+  background-image: url(https://s3-alpha-sig.figma.com/img/7ab1/9baf/1088e42e5819b060b8c0fe18edeb7c66?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=XNePWK02gfL13JLmF0akj7B0ICW8p5pwAAfTyEGYcBJBobHF2swm1IbsFY6IypbxN3joK5mVWtTsTmwPRpdvYVpjmgHoxsyJKSumrA5AwqOfJtvf0-QA~c2DkKsMoGg6aGBLYHpAn6yU1yIr5z2ufvwRguEoL1485PKdS0I3r4SMuhtgDgwrWU~nfNRb2AIke8P~Bk1J~hWNeGfSIzPuWqpOeUicDN7~5NPC~P5fe-GsrC1hwjWfEzfAti~ka4QxGhaZsvmURwE7EZNdHLd9LsgMoQuAyAeK8l6nGsSgRkC3btJ-TeDjZljIMnF67G-EaJJi-lB6VasPATK7sqIzJQ__);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+}
+
+.submitBtn {
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #1f1f21;
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 2%;
+  font-weight: 500;
+  margin-top: 66px;
+  cursor: pointer;
+}
