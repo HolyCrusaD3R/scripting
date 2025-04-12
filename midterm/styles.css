@@ -151,3 +151,129 @@ input[type="checkbox"]:checked {
   border: 1px solid #eaccc9;
   box-shadow: 2px 2px 5.1px #ebcdca;
 }
+
+.hidden {
+  display: none;
+}
+
+/* GUESSING GAME  */
+/* body {
+  TODO
+  background-color: #d9d9d9;
+} */
+
+.guessingGameContainer {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+  align-items: center;
+  text-align: center;
+}
+
+.guessingGameHeader h1 {
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 700;
+  color: #070a52;
+}
+
+#guessingGameText {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 51px;
+}
+
+.guessResult {
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 700;
+}
+.correct-result {
+  color: #247527;
+}
+
+.wrong-result {
+  color: #af2d2d;
+}
+
+.error-message-guessing-game {
+  color: #ff0000;
+  font-size: 19px;
+  margin-top: 28px;
+  font-weight: 500;
+}
+
+.scoreContainer {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 33px;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  text-align: left;
+}
+
+#guessInput {
+  width: 300px;
+  height: 50px;
+  margin-top: 3rem;
+  border-radius: 10px;
+  padding-left: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.submitRedBtn {
+  background-color: #df2e38;
+  border-radius: 14px;
+  width: 170px;
+  height: 60px;
+  color: white;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  margin-top: 39px;
+}
+
+.guessHistory {
+  margin-top: 48px;
+}
+
+.guessHistory h2 {
+  font-family: Inter;
+  font-size: 39px;
+  font-weight: 600;
+  color: #247527;
+}
+
+#guessHistoryList {
+  margin-top: 100px;
+}
+
+.guessHistoryItem {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+li {
+  list-style-position: inside;
+}
+
+.numberText {
+  display: inline;
+  margin: 0;
+  color: #005eff;
+}

@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="formPage">
@@ -125,6 +129,58 @@
           </div>
           <button type="submit" class="submitBtn">Submit</button>
         </form>
+      </div>
+    </div>
+    <div class="guessingGame">
+      <div class="guessingGameContainer">
+        <div class="guessingGameHeader">
+          <h1>Guess the Number!</h1>
+          <p id="guessingGameText">
+            I'm thinking of a number between 1 and 100.
+          </p>
+          <div class="guessResult wrong-result" id="tooHigh">
+            <p>📉 Too high!</p>
+          </div>
+          <div class="guessResult wrong-result" id="tooLow">
+            <p>📈 Too low!</p>
+          </div>
+          <div class="guessResult correct-result" id="correctResult">
+            <p>You guessed right!</p>
+          </div>
+          <div class="scoreContainer">
+            <p id="scoreText">Score: 0 / 10</p>
+            <p id="attemptsText">Attempts: 0 / 10</p>
+          </div>
+          <div class="guessingGameContent">
+            <input
+              type="number"
+              id="guessInput"
+              name="guessInput"
+              placeholder="Enter your guess"
+            />
+            <p
+              for="guessInput hidden"
+              class="error-message-guessing-game"
+              id="error-message-guessing-game"
+            >
+              Please enter a number between 1 and 100!
+            </p>
+            <div class="btnContainer">
+              <button id="guessBtn" class="submitRedBtn">Guess</button>
+              <button id="restartBtn" class="submitRedBtn">Restart</button>
+            </div>
+            <div class="guessHistory">
+              <h2>Guess History</h2>
+              <ul id="guessHistoryList">
+                <li class="guessHistoryItem">
+                  You guessed
+                  <span class="numberText">34</span>
+                  ( Too high )
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
