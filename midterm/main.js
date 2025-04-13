@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     clearErrors();
-    const isValid = true;
+    let isValid = true;
     const name = document.getElementById("name");
     const surname = document.getElementById("surname");
     const email = document.getElementById("email");
@@ -72,8 +72,130 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (isValid) {
-      alert("Form submitted successfully!");
-      form.reset();
+      // alert("Form submitted successfully!");
+      // form.reset();
+      startGame();
     }
   });
 });
+
+let secretNumber = Math.floor(Math.random() * 100) + 1;
+let attempts = 0;
+let maxAttempts = 10;
+let score = 0;
+
+const formPage = document.getElementById("formPage");
+const guessInput = document.getElementById("guessInput");
+const guessBtn = document.getElementById("guessBtn");
+const restartBtn = document.getElementById("restartBtn");
+const tooHighMsg = document.getElementById("tooHigh");
+const tooLowMsg = document.getElementById("tooLow");
+const gameOver = document.getElementById("gameOver");
+const correctResultMsg = document.getElementById("correctResult");
+const scoreText = document.getElementById("scoreText");
+const attemptsText = document.getElementById("attemptsText");
+const errorMsg = document.getElementById("error-message-guessing-game");
+const guessHistoryList = document.getElementById("guessHistoryList");
+
+function resetGame() {
+  secretNumber = Math.floor(Math.random() * 100) + 1;
+  attempts = 0;
+  score = 0;
+  guessInput.value = "";
+  scoreText.textContent = `Score: ${score}`;
+  attemptsText.textContent = `Attempts: ${attempts} / ${maxAttempts}`;
+  errorMsg.classList.add("hidden");
+  tooHighMsg.classList.add("hidden");
+  tooLowMsg.classList.add("hidden");
+  correctResultMsg.classList.add("hidden");
+  gameOver.classList.add("hidden");
+  guessBtn.disabled = false;
+  guessInput.disabled = false;
+  guessHistoryList.innerHTML = "";
+}
+
+function showResultMessage(resultType) {
+  tooHighMsg.classList.add("hidden");
+  tooLowMsg.classList.add("hidden");
+  correctResultMsg.classList.add("hidden");
+  gameOver.classList.add("hidden");
+  resultType === "high"
+    ? tooHighMsg.classList.remove("hidden")
+    : resultType === "low"
+    ? tooLowMsg.classList.remove("hidden")
+    : resultType === "gameOver"
+    ? gameOver.classList.remove("hidden")
+    : correctResultMsg.classList.remove("hidden");
+}
+
+function handleGuessValidation(guess) {
+  if (!guess || guess < 1 || guess > 100) {
+    errorMsg.classList.remove("hidden");
+    return false;
+  }
+  errorMsg.classList.add("hidden");
+  return true;
+}
+
+function handleAttemptsChange() {
+  attemptsText.textContent = `Attempts: ${attempts} / ${maxAttempts}`;
+  if (attempts >= maxAttempts) {
+    showResultMessage("gameOver");
+    guessBtn.disabled = true;
+    guessInput.disabled = true;
+    return;
+  }
+}
+
+function handleAddHistoryItem(guess, resultText) {
+  const historyItem = document.createElement("li");
+  historyItem.className = "guessHistoryItem";
+  historyItem.innerHTML = `You guessed <span class="numberText">${guess}</span> ${resultText}`;
+  guessHistoryList.prepend(historyItem);
+}
+
+function handleGuess() {
+  const guess = Number(guessInput.value);
+
+  if (!handleGuessValidation(guess)) {
+    return;
+  }
+
+  let resultType = "";
+  let resultText = "";
+
+  if (guess === secretNumber) {
+    score++;
+    scoreText.textContent = `Score: ${score}`;
+    resultType = "correct";
+    resultText = `( Correct )`;
+    showResultMessage(resultType);
+    attempts = 0;
+    handleAttemptsChange();
+    secretNumber = Math.floor(Math.random() * 100) + 1;
+  } else if (guess > secretNumber) {
+    resultType = "high";
+    resultText = `( Too High )`;
+    showResultMessage(resultType);
+    attempts++;
+    handleAttemptsChange();
+  } else {
+    resultType = "low";
+    resultText = `( Too Low )`;
+    showResultMessage(resultType);
+    attempts++;
+    handleAttemptsChange();
+  }
+
+  handleAddHistoryItem(guess, resultText);
+  guessInput.value = "";
+}
+
+function startGame() {
+  formPage.classList.add("hidden");
+  const guessingGame = document.getElementById("guessingGame");
+  guessingGame.classList.remove("hidden");
+  guessBtn.addEventListener("click", handleGuess);
+  restartBtn.addEventListener("click", resetGame);
+  resetGame();
+}

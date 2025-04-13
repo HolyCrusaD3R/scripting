@@ -131,7 +131,7 @@
         </form>
       </div>
     </div>
-    <div class="guessingGame">
+    <div class="guessingGame hidden" id="guessingGame">
       <div class="guessingGameContainer">
         <div class="guessingGameHeader">
           <h1>Guess the Number!</h1>
@@ -146,6 +146,9 @@
           </div>
           <div class="guessResult correct-result" id="correctResult">
             <p>You guessed right!</p>
+          </div>
+          <div class="guessResult wrong-result" id="gameOver">
+            <p>Game Over!</p>
           </div>
           <div class="scoreContainer">
             <p id="scoreText">Score: 0 / 10</p>
