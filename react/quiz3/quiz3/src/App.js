@@ -14,8 +14,9 @@ function App() {
   const handleCreatePost = (newTitle, newDescription) => {
     setData((data) => [
       ...data,
-      { title: newTitle, description: newDescription },
+      { title: newTitle, description: newDescription, id: currId },
     ]);
+    setCurrId((currId) => currId + 1);
   };
 
   return (
